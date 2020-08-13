@@ -28,6 +28,12 @@ Great resources for learning and practising which is used currently by me.
 
 - [NOI](http://www.noi.cn/)
 
+### Book
+
+- 《CCF中学生计算机程序设计》
+- 《算法竞赛入门经典》
+- etc.
+
 ## Preferance
 
 - Programming Language: C++
