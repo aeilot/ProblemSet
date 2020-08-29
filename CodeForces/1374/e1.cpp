@@ -14,11 +14,9 @@ using namespace std;
 
 #define int long long
 int n, k, a, b, c, t, type1[200005], type2[200005], type3[200005], cnt1, cnt2, cnt3, ans;
-signed main()
-{
+signed main() {
     cin >> k >> n;
-    for (int i = 1; i <= k; i++)
-    {
+    for (int i = 1; i <= k; i++) {
         cin >> a >> b >> c;
         if (b == 0 && c == 0)
             continue;
@@ -34,8 +32,7 @@ signed main()
     for (int i = 1; i <= min(cnt3, cnt2); i++)
         type1[++cnt1] = type3[i] + type2[i];
     sort(type1 + 1, type1 + cnt1 + 1);
-    if (cnt1 < n)
-    {
+    if (cnt1 < n) {
         cout << -1;
         return 0;
     }
