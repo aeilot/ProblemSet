@@ -38,4 +38,4 @@ Great resources for learning and practising which is used currently by me.
 
 - Programming Language: C++
 - Editor: VSCode + VIM
-- OS: Linux (Arch)
+- OS: macOS
