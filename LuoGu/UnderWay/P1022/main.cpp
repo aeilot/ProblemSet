@@ -1,37 +1,40 @@
-#include <iostream>
 #include <cstdio>
+#include <iostream>
 #include <stack>
 #include <string>
 
 using namespace std;
+class Member {
+public:
+	int num;
+	char unknown;
+}
 
-struct member{
-	int number;
-	bool isUnknown;	
-};
-
-struct expr{
-	member unknown;
-	member number;
-};
+bool isAlpha(char c){
+	return (c >= 'a' && c <= 'z');
+}
 
 int main(){
-	string equa;
-	cin >> equa;
-	
-	int minus_mark = 1;
-	char name;
-	for(int i = 0; i<equa.size(); i++){
-		char a = equa[i];
-		if(a=='-'){
+    string equa;
+    cin >> equa;
+    string buffer;
 
-		}else if(a=='+'){
+    bool isMinus = false;
+    for (int i = 0; i < equa.size(); i++) {
+        if (equa[i] = '-') {
+            if (i != 0) {
+                isMinus = true;
+            }
+        } else if (equa[i] == '+') {
 
-		}else if(a=='='){
+        } else if (equa[i] == '='){
 
-		}else{
+        } else if(isAlpha(equa[i])){
 
-		}
-	}
-	return 0;
+        } else {
+            cout << "ERROR" << endl;
+        }
+    }
+
+    return 0;
 }
