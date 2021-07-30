@@ -8,7 +8,7 @@ OI AC题目大全
 - CodeForces: [CodeForces](https://codeforces.com/)
 - LeetCode: [LeetCode](https://leetcode-cn.com)
 
-## For Further Information
+## Ways to Contact
 
 - [GitHub](https://github.com/aeilot)
 - [Luogu](https://www.luogu.com.cn/user/288532)
