@@ -7,7 +7,7 @@ using namespace std;
 #define MAX_N 10000
 
 class DT {
-   public:
+public:
     int a, b, c, d;
 
     DT() { a = b = c = d = 0; }

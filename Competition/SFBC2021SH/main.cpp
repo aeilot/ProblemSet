@@ -6,14 +6,14 @@
 using namespace std;
 
 int answerFunc1(int n) {
-    int res = 0;  // res为结果变量
+    int res = 0;// res为结果变量
     //在本函数体内输入解题代码
     res = 4 * pow(n, 0) + 3 * pow(n, 1) + 2 * pow(n, 2) + 1 * pow(n, 3);
     return res;
 }
 
 int answerFunc2(int n) {
-    int res = 0;  // res为结果变量
+    int res = 0;// res为结果变量
     //在本函数体内输入解题代码
     int AR[7] = {6, 0, 1, 2, 3, 4, 5};
     int offset = int(pow(10, n) - 1) % 7;
@@ -34,7 +34,7 @@ int decom(int n) {
 }
 
 int answerFunc3(int n) {
-    int res = 0;  // res为结果变量
+    int res = 0;// res为结果变量
     //在本函数体内输入解题代码
     res = decom(n);
     if (res == n) {
@@ -46,14 +46,14 @@ int answerFunc3(int n) {
 }
 
 int answerFunc4() {
-    int res = 0;  // res为结果变量
+    int res = 0;// res为结果变量
     //在本函数体内输入解题代码
     res = 5;
     return res;
 }
 
 int answerFunc5(int n) {
-    int res = 0;  // res为结果变量
+    int res = 0;// res为结果变量
     //在本函数体内输入解题代码
     int t = 3;
     while (t != n) {
@@ -68,7 +68,7 @@ int answerFunc5(int n) {
 }
 
 int answerFunc6(int n) {
-    int res = 0;  // res为结果变量
+    int res = 0;// res为结果变量
     //在本函数体内输入解题代码
     int upper = 1;
     int lower = 1;
