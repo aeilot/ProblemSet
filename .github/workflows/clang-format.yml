@@ -1,0 +1,21 @@
+name: "Check Clang Format"
+
+on: [push, pull_request]
+
+jobs:
+  format:
+    name: "Run Clang Format"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: "Install clang-format"
+        run: |
+          sudo apt-get update
+          sudo apt-get install clang-format-10
+      - name: "Format Codes"
+        run: clang-format-10 -style=file -i src/*.cpp src/*/*.cpp  src/*/*.h
+      - name: Push changes
+        uses: actions-go/push@v1
+        with:
+          author-name: Clang Format Bot
+          commit-message: Run clang-format
