@@ -15,5 +15,5 @@ OI AC题目大全
 
 - [GitHub](https://github.com/aeilot)
 - [Luogu](https://www.luogu.com.cn/user/288532)
-- [Blog](https://aeilot.github.io)
-- [题解](https://aeilot.github.io/categories/OI-刷题/)
+- [Blog](https://blog.aeilot.top)
+- [题解](https://blog.aeilot.top/categories/OI-刷题/)
