@@ -21,13 +21,9 @@ struct Side {
     }
 };
 
-bool isNumber(char a) {
-    return a >= '0' && a <= '9';
-}
+bool isNumber(char a) { return a >= '0' && a <= '9'; }
 
-bool isAlpha(char a) {
-    return a >= 'a' && a <= 'z';
-}
+bool isAlpha(char a) { return a >= 'a' && a <= 'z'; }
 
 Side parse(string &opr) {
     Side ra;
@@ -47,11 +43,11 @@ Side parse(string &opr) {
         stack<int> mem;
         while (isNumber(opr[i])) {
             mem.push(opr[i] - '0');
-            //printf("In: %d\n", opr[i]-'0');
+            // printf("In: %d\n", opr[i]-'0');
             tmpc++;
             i++;
         }
-        //printf("TMPC: %d, I: %d\n",tmpc,i);
+        // printf("TMPC: %d, I: %d\n",tmpc,i);
         int tmp = 0;
         for (int j = 0; j < tmpc; j++) {
             int t = mem.top();
@@ -59,9 +55,10 @@ Side parse(string &opr) {
             tmp += t * pow(10, j);
         }
         tmp *= buffer;
-        //printf("Get Number: %d\n", tmp);
+        // printf("Get Number: %d\n", tmp);
         if (isAlpha(opr[i])) {
-            if (tmp != 0) ra.unknown += tmp;
+            if (tmp != 0)
+                ra.unknown += tmp;
             else
                 ra.unknown += 1 * buffer;
             i++;
@@ -92,14 +89,15 @@ int main() {
             right = input.substr(t, i);
         }
     }
-    //cout << left << endl << right << endl;
+    // cout << left << endl << right << endl;
     Side lft = parse(left);
     Side rgt = parse(right);
     int un = lft.unknown - rgt.unknown;
     int num = rgt.number - lft.number;
     double ans = double(num) / double(un);
     cout << name << "=";
-    if (ans != 0) printf("%.3lf\n", ans);
+    if (ans != 0)
+        printf("%.3lf\n", ans);
     else
         printf("0.000\n");
     return 0;
