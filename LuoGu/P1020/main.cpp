@@ -31,6 +31,7 @@ int main() {
             d2[j] = ARR[i];
         }
     }
-    cout << c1 + 1 << endl << c2 + 1 << endl;
+    cout << c1 + 1 << endl
+         << c2 + 1 << endl;
     return 0;
 }
