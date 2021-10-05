@@ -5,7 +5,7 @@
 using namespace std;
 
 int w[26], v[26];
-int dp[30001];  //! 背包DP的数组容量特别需要注意！！！
+int dp[30001];//! 背包DP的数组容量特别需要注意！！！
 
 int main() {
     int n, m;
