@@ -7,7 +7,7 @@
 
 using namespace std;
 
-vector<vector<int> > CSys;
+vector<vector<int>> CSys;
 
 int dp[25001];
 int w[101];
