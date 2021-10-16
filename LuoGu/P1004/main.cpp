@@ -21,10 +21,10 @@ int main() {
             for (int h = 1; h <= n; h++) {
                 for (int k = 1; k <= n; k++) {
                     DP[i][j][h][k] =
-                        max(max(DP[i - 1][j][h - 1][k], DP[i - 1][j][h][k - 1]),
-                            max(DP[i][j - 1][h - 1][k],
-                                DP[i][j - 1][h][k - 1])) +
-                        map[i][j] + map[h][k];
+                            max(max(DP[i - 1][j][h - 1][k], DP[i - 1][j][h][k - 1]),
+                                max(DP[i][j - 1][h - 1][k],
+                                    DP[i][j - 1][h][k - 1])) +
+                            map[i][j] + map[h][k];
                     if (i == h && j == k) DP[i][j][h][k] -= map[i][j];
                 }
             }
