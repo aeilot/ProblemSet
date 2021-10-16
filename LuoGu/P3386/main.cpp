@@ -5,7 +5,7 @@
 using namespace std;
 
 class Edge {
-   public:
+public:
     int u, v;
     Edge(int u, int v) {
         this->u = u;
@@ -14,9 +14,9 @@ class Edge {
 };
 
 class BGraph {
-   public:
+public:
     int lc, rc;
-    vector<vector<Edge> > LE, RE;
+    vector<vector<Edge>> LE, RE;
 
     BGraph(int lc, int rc) {
         this->lc = lc;
@@ -46,7 +46,7 @@ class BGraph {
         cout << ans << endl;
     }
 
-   protected:
+protected:
     vector<int> mark;
     vector<int> matched;
     bool DFS_H(int start) {
