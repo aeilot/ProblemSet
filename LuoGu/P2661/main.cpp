@@ -5,7 +5,7 @@
 
 using namespace std;
 
-vector<vector<int> > gp;
+vector<vector<int>> gp;
 
 int dst, n;
 int dfs(int i, int rd) {
