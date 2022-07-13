@@ -8,7 +8,7 @@ int main() {
     gets(a);
     cout << a << endl;
     string b;
-    getline(cin, b);
+    getline(cin, b, '-');
     cout << b << endl;
     return 0;
 }
