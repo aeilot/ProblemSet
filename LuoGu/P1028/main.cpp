@@ -7,7 +7,7 @@ using namespace std;
 int calc(int num, int last) {
     // cout << num << endl;
     int ans = 1;
-    int c = pow(10, ((int)log10(num) + 1));
+    int c = pow(10, ((int) log10(num) + 1));
     for (int i = 1; i <= last / 2; i++) {
         ans += calc(c * i + num, i);
     }

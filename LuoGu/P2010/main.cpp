@@ -6,7 +6,7 @@
 using namespace std;
 
 class Date {
-   protected:
+protected:
     void fromString(string &str) {
         for (int i = 0; i < str.size(); i++) {
             if (i >= 0 && i <= 3) {
@@ -30,7 +30,7 @@ class Date {
         return str;
     }
 
-   public:
+public:
     int year, month, day;
     bool run;
     string data;
@@ -82,14 +82,14 @@ class Date {
 int dateCMP(Date &a, Date &b) {
     if (a.year > b.year || (a.year == b.year && a.month > b.month) ||
         (a.year == b.year && a.month == b.month && a.day > b.day)) {
-        return 1;  // a>b
+        return 1;// a>b
     } else if (a.year < b.year || (a.year == b.year && a.month < b.month) ||
                (a.year == b.year && a.month == b.month && a.day < b.day)) {
-        return -1;  // a<b
+        return -1;// a<b
     } else if (a.year == b.year && a.month == b.month && a.day == b.day) {
-        return 0;  // a==b
+        return 0;// a==b
     }
-    return -233;  // err
+    return -233;// err
 }
 
 bool isPalindrome(Date &d) {

@@ -21,7 +21,7 @@ int f(int start, int rem, int sum) {
     }
     int ans = 0;
     for (int i = start; i < n; i++) {
-        ans += f(i + 1, rem - 1, sum + ar[i]);  // 不降原则
+        ans += f(i + 1, rem - 1, sum + ar[i]);// 不降原则
     }
     return ans;
 }

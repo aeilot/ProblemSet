@@ -52,6 +52,6 @@ int main() {
                 correct++;
         }
     }
-    printf("%.0f\n", round(correct / (double)time * 60.0));
+    printf("%.0f\n", round(correct / (double) time * 60.0));
     return 0;
 }

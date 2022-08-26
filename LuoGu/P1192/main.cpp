@@ -15,7 +15,7 @@ int main() {
         int t = i - k;
         if (t < 0) t = 0;
         while (t < i) {
-            ans[i] += ans[t] % 100003;  // 如果不用余数会过大！ long long 都不够
+            ans[i] += ans[t] % 100003;// 如果不用余数会过大！ long long 都不够
             t++;
         }
     }

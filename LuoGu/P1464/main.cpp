@@ -5,7 +5,7 @@
 
 using namespace std;
 
-long long MEM[25][25][25];  // 记忆化搜索减少重复计算
+long long MEM[25][25][25];// 记忆化搜索减少重复计算
 
 long long w(long long a, long long b, long long c) {
     // printf("w(%lld, %lld, %lld)\n", a, b, c);
