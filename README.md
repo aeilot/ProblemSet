@@ -17,3 +17,4 @@ OI AC题目大全
 - [Luogu](https://www.luogu.com.cn/user/288532)
 - [Blog](https://blog.aeilot.top)
 - [题解](https://blog.aeilot.top/categories/OI-刷题/)
+- Project Euler: `1984956_QgKd62ri6EE2fVVv8s9QA48fB9SgwNzW`
