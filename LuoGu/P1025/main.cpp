@@ -9,7 +9,7 @@ int div(int remain, int sum, int last) {
         return 1;
     } else if (remain == 0 && sum > 0) {
         return 0;
-    }  // 剪枝
+    }// 剪枝
     int ans = 0;
     for (int i = last; i <= sum; i++) {
         // if (sav[remain - 1][sum - i] != -1)

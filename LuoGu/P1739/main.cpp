@@ -16,7 +16,7 @@ int main() {
             if (i.empty()) {
                 cout << "NO" << endl;
                 return 0;
-            };  // 特殊情况要考虑
+            };// 特殊情况要考虑
             i.pop();
         }
     }
