@@ -1,24 +1,24 @@
-#include <iostream>
 #include <cstdio>
+#include <iostream>
 #include <map>
 #include <string>
 
 using namespace std;
 
-int main(){
-    map<string,string> dict;
-    int n,m;
+int main() {
+    map<string, string> dict;
+    int n, m;
     cin >> n >> m;
-    for(int i = 0; i<m; i++){
-        string ta,tb;
+    for (int i = 0; i < m; i++) {
+        string ta, tb;
         cin >> ta >> tb;
-        if(tb.size()<ta.size()){
-            dict.insert({ta,tb});
-        }else{
-            dict.insert({ta,ta});
+        if (tb.size() < ta.size()) {
+            dict.insert({ta, tb});
+        } else {
+            dict.insert({ta, ta});
         }
     }
-    for(int i = 0; i<n; i++){
+    for (int i = 0; i < n; i++) {
         string ta;
         cin >> ta;
         cout << dict[ta] << " ";
