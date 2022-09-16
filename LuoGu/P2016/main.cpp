@@ -5,7 +5,7 @@
 
 using namespace std;
 
-vector<vector<int> > tree;
+vector<vector<int>> tree;
 
 int dp[1501][2];
 int vis[1501];

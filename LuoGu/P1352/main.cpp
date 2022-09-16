@@ -8,7 +8,7 @@ using namespace std;
 long long dp[6001][15];
 int vis[6001];
 int ha[6001];
-vector<vector<int> > tr;
+vector<vector<int>> tr;
 
 int dfs(int x) {
     vis[x] = 1;

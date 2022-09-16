@@ -12,7 +12,8 @@ int main() {
     int i;
     for (i = t; i > 0; i--) {
         if (s <= 0) {
-            cout << "Yes" << endl << t - i << endl;
+            cout << "Yes" << endl
+                 << t - i << endl;
             return 0;
         }
         if (m >= 10) {
@@ -29,20 +30,23 @@ int main() {
                     c--;
                 }
                 if (s <= 0) {
-                    cout << "Yes" << endl << t - c << endl;
+                    cout << "Yes" << endl
+                         << t - c << endl;
                 } else {
                     while (c > 0) {
                         s -= 17;
                         c--;
                     }
-                    cout << "No" << endl << savs - s << endl;
+                    cout << "No" << endl
+                         << savs - s << endl;
                 }
                 return 0;
             } else if (v2 > v1 || (v1 >= v2 && v2 >= s)) {
                 while (dt > 0 && i > 0) {
                     s -= 17;
                     if (s <= 0) {
-                        cout << "Yes" << endl << t - i << endl;
+                        cout << "Yes" << endl
+                             << t - i << endl;
                         return 0;
                     }
                     dt--;
@@ -57,8 +61,10 @@ int main() {
         }
     }
     if (s <= 0) {
-        cout << "Yes" << endl << t - i << endl;
+        cout << "Yes" << endl
+             << t - i << endl;
     } else
-        cout << "No" << endl << savs - s << endl;
+        cout << "No" << endl
+             << savs - s << endl;
     return 0;
 }
