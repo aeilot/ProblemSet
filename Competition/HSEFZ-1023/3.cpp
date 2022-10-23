@@ -1,20 +1,19 @@
-#include <iostream>
 #include <cstdio>
+#include <iostream>
 
 using namespace std;
 
-struct Trie{
+struct Trie {
     int nex[3001][26];
     int cnt = 0;
     int data[3001];
 
-    void insert(){
-        
+    void insert() {
     }
 };
 
-int main(){
+int main() {
     // Type your code here
-    
+
     return 0;
 }

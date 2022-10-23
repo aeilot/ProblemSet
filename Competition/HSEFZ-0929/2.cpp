@@ -14,7 +14,7 @@ struct Node {
     int val, indeg;
     vector<Node> subNodes;
 
-    friend bool operator<(const Node& a, const Node& b) {
+    friend bool operator<(const Node &a, const Node &b) {
         if (a.indeg == b.indeg)
             return a.val > b.val;
         else
