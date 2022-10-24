@@ -36,19 +36,19 @@ int main() {
         for (int b = 0; b <= cnt[2]; b++) {
             for (int c = 0; c <= cnt[3]; c++) {
                 for (int d = 0; d <= cnt[4]; d++) {
-                    int& tt = dp[a][b][c][d];
+                    int &tt = dp[a][b][c][d];
                     if (a >= 1)
                         tt = max(tt, dp[a - 1][b][c][d] +
-                                         map[calc(a - 1, b, c, d) + 1]);
+                                             map[calc(a - 1, b, c, d) + 1]);
                     if (b >= 1)
                         tt = max(tt, dp[a][b - 1][c][d] +
-                                         map[calc(a, b - 1, c, d) + 2]);
+                                             map[calc(a, b - 1, c, d) + 2]);
                     if (c >= 1)
                         tt = max(tt, dp[a][b][c - 1][d] +
-                                         map[calc(a, b, c - 1, d) + 3]);
+                                             map[calc(a, b, c - 1, d) + 3]);
                     if (d >= 1)
                         tt = max(tt, dp[a][b][c][d - 1] +
-                                         map[calc(a, b, c, d - 1) + 4]);
+                                             map[calc(a, b, c, d - 1) + 4]);
                 }
             }
         }
