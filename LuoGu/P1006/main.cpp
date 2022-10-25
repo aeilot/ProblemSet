@@ -21,12 +21,12 @@ int main() {
     for (int a = 1; a <= m; a++) {
         for (int b = 1; b <= n; b++) {
             for (int c = 1; c <= m; c++) {
-                for (int d = b + 1; d <= n; d++) {  // 两路不相交， 一上一下
+                for (int d = b + 1; d <= n; d++) {// 两路不相交， 一上一下
                     dp[a][b][c][d] =
-                        max(max(dp[a - 1][b][c - 1][d], dp[a - 1][b][c][d - 1]),
-                            max(dp[a][b - 1][c - 1][d],
-                                dp[a][b - 1][c][d - 1])) +
-                        MAP[a][b] + MAP[c][d];
+                            max(max(dp[a - 1][b][c - 1][d], dp[a - 1][b][c][d - 1]),
+                                max(dp[a][b - 1][c - 1][d],
+                                    dp[a][b - 1][c][d - 1])) +
+                            MAP[a][b] + MAP[c][d];
                 }
             }
         }
