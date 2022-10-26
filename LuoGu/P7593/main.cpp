@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     long long t;
     cin >> t;
     for (long long i = 0; i < t; i++) {

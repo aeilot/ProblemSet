@@ -10,7 +10,7 @@ long long DP[1010][1010][2];
 int n, m;
 
 long long getDP(int i, int j) {
-    return max(DP[i][j][0], DP[i][j][1]);  // 0: UP, 1: DOWN
+    return max(DP[i][j][0], DP[i][j][1]);// 0: UP, 1: DOWN
 }
 
 int main() {
@@ -24,7 +24,7 @@ int main() {
     }
     for (int i = 0; i <= n + 1; i++) {
         for (int j = 0; j <= m + 1; j++) {
-            DP[i][j][0] = DP[i][j][1] = (int)(-1e18);
+            DP[i][j][0] = DP[i][j][1] = (int) (-1e18);
         }
     }
     DP[1][1][0] = DP[1][1][1] = MAP[1][1];
