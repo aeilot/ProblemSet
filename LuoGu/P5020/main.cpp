@@ -1,48 +1,35 @@
-#include <algorithm>
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
 #include <iostream>
-#include <vector>
+#include <cstdio>
+#include <algorithm>
+#include <cstring>
 
 using namespace std;
 
-vector<vector<int>> CSys;
+int MAP[50000];
+int vis[50000];
 
-int dp[25001];
-int w[101];
-
-#define NEED_TO_ADD 2
-#define CAN_GET 1
-
-int main() {
-    ios::sync_with_stdio(false);
+int main(){
+    // Type your code here
     int T;
     cin >> T;
-    CSys.resize(T);
-    for (int i = 0; i < T; i++) {
-        memset(dp, 0, sizeof(dp));
-        int n;
+    for(int i = 0; i<T; i++){
+        memset(vis,0,sizeof(vis));
+        int n,ans = 0;
         cin >> n;
-        CSys[i].resize(n);
-        for (int j = 0; j < n; j++) {
-            cin >> CSys[i][j];
-            dp[CSys[i][j]] = NEED_TO_ADD;
+        int maxx = 0;
+        for(int j = 1; j<=n; j++){
+            cin >> MAP[j];
+            maxx = max(maxx,MAP[j]);
         }
-        sort(CSys[i].begin(), CSys[i].end());
-        for (int j = 0; j <= CSys[i][CSys[i].size()]; j++) {
-            if (dp[j] > 0) {
-                for (int k : CSys[i]) {
-                    if (j + k <= CSys[i][CSys[i].size()])
-                        dp[j + k] = 1;
-                    else
-                        break;
-                }
+        sort(MAP+1, MAP+n+1);
+        for(int j = 1; j<=n; j++){
+            if(vis[MAP[j]]) continue;
+            ans++;
+            vis[MAP[j]]=1;
+            for(int k = MAP[j]; k<=maxx; k++){
+                if(vis[k-MAP[j]]) vis[k]=1;
             }
         }
-        int ans = 0;
-        for (int x = 0; x <= CSys[i].back(); x++)
-            if (dp[x] == 2) ans++;
         cout << ans << endl;
     }
     return 0;
