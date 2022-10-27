@@ -37,28 +37,28 @@ int main() {
         for (int v = n; v >= 0; v--) {
             if (annex[i].size() == 0) {
                 DP[v] =
-                    max(DP[v],
-                        (v - mai[i].v >= 0) ? DP[v - mai[i].v] + mai[i].p : 0);
+                        max(DP[v],
+                            (v - mai[i].v >= 0) ? DP[v - mai[i].v] + mai[i].p : 0);
             } else if (annex[i].size() == 1) {
                 DP[v] = max(
-                    DP[v],
-                    max((v - mai[i].v >= 0) ? DP[v - mai[i].v] + mai[i].p : 0,
-                        (v - mai[i].v - annex[i][0].v >= 0)
-                            ? DP[v - mai[i].v - annex[i][0].v] + mai[i].p +
-                                  annex[i][0].p
-                            : 0));
+                        DP[v],
+                        max((v - mai[i].v >= 0) ? DP[v - mai[i].v] + mai[i].p : 0,
+                            (v - mai[i].v - annex[i][0].v >= 0)
+                                    ? DP[v - mai[i].v - annex[i][0].v] + mai[i].p +
+                                              annex[i][0].p
+                                    : 0));
             } else {
                 DP[v] = max(
-                    max(DP[v],
-                        (v - mai[i].v - annex[i][0].v - annex[i][1].v >= 0)
-                            ? DP[v - mai[i].v - annex[i][0].v - annex[i][1].v] +
-                                  mai[i].p + annex[i][0].p + annex[i][1].p
-                            : 0),
-                    max((v - mai[i].v >= 0) ? DP[v - mai[i].v] + mai[i].p : 0,
-                        (v - mai[i].v - annex[i][0].v >= 0)
-                            ? DP[v - mai[i].v - annex[i][0].v] + mai[i].p +
-                                  annex[i][0].p
-                            : 0));
+                        max(DP[v],
+                            (v - mai[i].v - annex[i][0].v - annex[i][1].v >= 0)
+                                    ? DP[v - mai[i].v - annex[i][0].v - annex[i][1].v] +
+                                              mai[i].p + annex[i][0].p + annex[i][1].p
+                                    : 0),
+                        max((v - mai[i].v >= 0) ? DP[v - mai[i].v] + mai[i].p : 0,
+                            (v - mai[i].v - annex[i][0].v >= 0)
+                                    ? DP[v - mai[i].v - annex[i][0].v] + mai[i].p +
+                                              annex[i][0].p
+                                    : 0));
             }
         }
     }

@@ -5,8 +5,8 @@
 
 using namespace std;
 
-set<pair<int, int> > fls_dom;
-set<pair<int, int> > fls_int;
+set<pair<int, int>> fls_dom;
+set<pair<int, int>> fls_int;
 long long F[100010], G[100010];
 int n, d, in;
 
@@ -23,8 +23,8 @@ int main() {
         int now = 0;
         int cnt = 0;
         while (1) {
-            set<pair<int, int> >::iterator iter =
-                fls_dom.lower_bound({now, now});
+            set<pair<int, int>>::iterator iter =
+                    fls_dom.lower_bound({now, now});
             if (iter == fls_dom.end()) break;
             now = iter->second;
             cnt++;
@@ -41,8 +41,8 @@ int main() {
         int now = 0;
         int cnt = 0;
         while (1) {
-            set<pair<int, int> >::iterator iter =
-                fls_int.lower_bound({now, now});
+            set<pair<int, int>>::iterator iter =
+                    fls_int.lower_bound({now, now});
             if (iter == fls_int.end()) break;
             now = iter->second;
             cnt++;

@@ -25,7 +25,7 @@ int main() {
             int j = i + len - 1;
             for (int k = i; k < j; k++) {
                 DP[i][j] = min(DP[i][j], DP[i][k] + DP[k + 1][j] + PRE[j] -
-                                             (i >= 1 ? PRE[i - 1] : 0));
+                                                 (i >= 1 ? PRE[i - 1] : 0));
             }
         }
     }
