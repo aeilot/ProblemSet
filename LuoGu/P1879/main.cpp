@@ -27,7 +27,7 @@ int main() {
         stj[++cnt] = i;
     }
     for (int i = 1; i <= cnt; i++) {
-        if (stj[i] & MAP[1]) continue;  // 注意！
+        if (stj[i] & MAP[1]) continue;// 注意！
         DP[1][i] = 1;
     }
     for (int i = 1; i <= m; i++) {
