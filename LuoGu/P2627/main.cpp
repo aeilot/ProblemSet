@@ -36,7 +36,7 @@ int main() {
         while (!mDP.empty() && i - k > mDP.front().i) {
             mDP.pop_front();
         }
-        if (i - k >= 1)  // CAUTION
+        if (i - k >= 1)// CAUTION
             DP[i] = PRE[i] + mDP.front().v;
         else
             DP[i] = PRE[i];

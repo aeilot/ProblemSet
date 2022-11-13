@@ -4,7 +4,7 @@
 
 using namespace std;
 
-vector<pair<int, int> > pv;
+vector<pair<int, int>> pv;
 
 int main() {
     // Type your code here
@@ -15,7 +15,8 @@ int main() {
         int n;
         cin >> n;
         if (n == 1) {
-            cout << 1 << endl << "1 2" << endl;
+            cout << 1 << endl
+                 << "1 2" << endl;
         } else {
             int cnt = 0;
             int ans = ((n % 2 == 0) ? n / 2 : n / 2 + 1);

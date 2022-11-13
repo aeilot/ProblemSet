@@ -34,7 +34,7 @@ int main() {
         if (i & (i >> 2)) continue;
         stx[++cnt] = i;
         int x = i;
-        while (x) {  // popcount
+        while (x) {// popcount
             sta[cnt] += x & 1;
             x >>= 1;
         }
@@ -51,11 +51,11 @@ int main() {
         }
     }
     for (int i = 3; i <= n; i++) {
-        for (int j = 1; j <= cnt; j++) {  // current
+        for (int j = 1; j <= cnt; j++) {// current
             if (stx[j] & MAP[i]) continue;
-            for (int k = 1; k <= cnt; k++) {  // prev
+            for (int k = 1; k <= cnt; k++) {// prev
                 if (stx[k] & MAP[i - 1] || check(k, j)) continue;
-                for (int l = 1; l <= cnt; l++) {  // prev*2
+                for (int l = 1; l <= cnt; l++) {// prev*2
                     if (check(j, l) || check(l, k) || (stx[l] & MAP[i - 2]))
                         continue;
                     DP[i][j][k] = max(DP[i][j][k], DP[i - 1][k][l] + sta[j]);
@@ -65,7 +65,7 @@ int main() {
     }
     long long ans = 0;
     for (int i = 1; i <= cnt; i++) {
-        for (int j = 0; j <= cnt; j++) {  // n = 1 时 j = 0
+        for (int j = 0; j <= cnt; j++) {// n = 1 时 j = 0
             ans = max(DP[n][i][j], ans);
         }
     }

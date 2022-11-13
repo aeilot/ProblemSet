@@ -28,7 +28,7 @@ void init() {
                 if (ok[tt] == 1) ok[tt] = 0;
             }
         } else {
-            nx[lst] = i;  // 记录 NX 优化时间
+            nx[lst] = i;// 记录 NX 优化时间
             lst = i;
         }
     }
