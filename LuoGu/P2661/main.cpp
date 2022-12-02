@@ -1,36 +1,40 @@
-#include <climits>
-#include <cstdio>
+#include <cstring>
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
-vector<vector<int>> gp;
+int cnt = 0x3f3f3f3f;
+int fa[200001];
+int dis[200001];
 
-int dst, n;
-int dfs(int i, int rd) {
-    if (rd > n) return rd;
-    if (rd > 0 && i == dst) {
-        return rd;
-    }
-    for (int j = 0; j < gp[i].size(); j++) {
-        return dfs(gp[i][j], rd + 1);
+int find(int x) {
+    if (fa[x] == x) return x;
+    int tmp = fa[x];
+    fa[x] = find(fa[x]);
+    dis[x] += dis[tmp];
+    return fa[x];
+}
+
+void uni(int x, int v) {
+    int xu = find(x), vu = find(v);
+    if (xu == vu) {
+        cnt = min(cnt, dis[v] + 1);
+    } else {
+        fa[xu] = vu;
+        dis[x] = dis[v] + 1;
     }
 }
 
 int main() {
+    // Type your code here
+    int n;
     cin >> n;
-    gp.resize(n);
-    for (int i = 0; i < n; i++) {
-        int a;
-        cin >> a;
-        gp[i].push_back(a - 1);
+    for (int i = 1; i <= n; i++) fa[i] = i;
+    for (int i = 1; i <= n; i++) {
+        int xx;
+        cin >> xx;
+        uni(i, xx);
     }
-    int mmin = INT_MAX;
-    for (int i = 0; i < n; i++) {
-        dst = i;
-        mmin = min(mmin, dfs(i, 0));
-    }
-    cout << mmin << endl;
+    cout << cnt << endl;
     return 0;
 }
