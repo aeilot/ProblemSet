@@ -15,7 +15,7 @@ int main() {
         for (int j = 1; j <= m; j++) {
             cin >> MAP[i][j];
             PRE[i][j] =
-                MAP[i][j] + PRE[i][j - 1] + PRE[i - 1][j] - PRE[i - 1][j - 1];
+                    MAP[i][j] + PRE[i][j - 1] + PRE[i - 1][j] - PRE[i - 1][j - 1];
         }
     }
     for (int k = min(n, m); k > 0; k--) {

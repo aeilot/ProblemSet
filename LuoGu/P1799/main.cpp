@@ -22,8 +22,8 @@ int main() {
                 f[i][j] = f[i - 1][j] + (A[i] == i - j);
             }
         }
-    }`ccc 28
-    int ans = 0;
+    }
+    `ccc 28 int ans = 0;
     for (int i = 1; i <= N; i++) {
         for (int j = 0; j <= i; j++) {
             ans = max(ans, f[i][j]);

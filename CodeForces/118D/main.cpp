@@ -12,17 +12,17 @@ int main() {
     int n1, n2, k1, k2;
     cin >> n1 >> n2 >> k1 >> k2;
     f[1][1][1][0] = f[1][0][1][1] =
-        1;  // TODO: Method of Initialization Matters
-    for (int i = 2; i <= n1 + n2; i++) {  // i standing for current location
-        for (int j = 0; j <= min(n1, i); j++) {  // j standing for chosen 1s
-            int k = i - j;                       // k standing for chosen 2s
+            1;                                 // TODO: Method of Initialization Matters
+    for (int i = 2; i <= n1 + n2; i++) {       // i standing for current location
+        for (int j = 0; j <= min(n1, i); j++) {// j standing for chosen 1s
+            int k = i - j;                     // k standing for chosen 2s
             if (k > n2) {
                 continue;
             }
             for (int l = 1; l <= k && l <= k2; l++) {
                 if (j >= 1)
                     f[i][j][1][0] =
-                        (f[i][j][1][0] + f[i - 1][j - 1][l][1]) % MOD;
+                            (f[i][j][1][0] + f[i - 1][j - 1][l][1]) % MOD;
             }
             for (int l = 1; l <= j && l <= k1; l++) {
                 f[i][j][1][1] = (f[i][j][1][1] + f[i - 1][j][l][0]) % MOD;

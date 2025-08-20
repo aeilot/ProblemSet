@@ -8,7 +8,7 @@ using namespace std;
 int main() {
     // Type your code here
     long long ans = 0;
-    priority_queue<long long, vector<long long>, greater<long long> > pq;
+    priority_queue<long long, vector<long long>, greater<long long>> pq;
     int n;
     cin >> n;
     for (int i = 0; i < n; i++) {

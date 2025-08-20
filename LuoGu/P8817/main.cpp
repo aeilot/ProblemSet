@@ -38,7 +38,7 @@ void bfs(int x) {
             if (x != 1 && ok[1][t]) {
                 f[x].push_back(t);
                 sort(f[x].begin(), f[x].end(),
-                     [](int u, int v) { return C[u] > C[v]; });  // TODO: ?
+                     [](int u, int v) { return C[u] > C[v]; });// TODO: ?
                 if (f[x].size() > 3) f[x].pop_back();
             }
         }

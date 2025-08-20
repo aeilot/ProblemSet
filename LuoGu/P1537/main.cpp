@@ -36,7 +36,8 @@ int main() {
         cout << "Collection #" << cns << ":" << endl;
         cns++;
         if (tv & 1) {
-            cout << "Can't be divided." << endl << endl;
+            cout << "Can't be divided." << endl
+                 << endl;
             continue;
         }
         cnt = 0;

@@ -71,7 +71,7 @@ int main() {
             ind[j] = in[j];
         }
         memset(v2, 0, sizeof(v2));
-        queue<pair<int, int> > qq;
+        queue<pair<int, int>> qq;
         vector<char> seq;
         int ccc = 0;
         int ans = 0;

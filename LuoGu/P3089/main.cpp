@@ -8,7 +8,7 @@ using namespace std;
 struct Point {
     int x, p;
 
-    const bool operator<(const Point& a) const { return this->x < a.x; }
+    const bool operator<(const Point &a) const { return this->x < a.x; }
 } PO[1010];
 
 long long F[1010][1010];

@@ -22,7 +22,7 @@ bool vis[5001];
 void dfs(int x) {
     cout << x << ' ';
     vis[x] = 1;
-    priority_queue<int, vector<int>, std::greater<int> > pq;
+    priority_queue<int, vector<int>, std::greater<int>> pq;
     for (int i = head[x]; i != -1; i = NDS[i].next) {
         int y = NDS[i].to;
         if (vis[y]) continue;
@@ -37,7 +37,7 @@ void dfs(int x) {
 
 int d1, d2;
 
-bool cmp(vector<int> &a, vector<int> &b) {  // <
+bool cmp(vector<int> &a, vector<int> &b) {// <
     for (int i = 0; i < min(a.size(), b.size()); i++) {
         if (a[i] > b[i]) return false;
     }
@@ -49,7 +49,7 @@ vector<int> tta;
 void dfs2(int x) {
     tta.push_back(x);
     vis[x] = 1;
-    priority_queue<int, vector<int>, std::greater<int> > pq;
+    priority_queue<int, vector<int>, std::greater<int>> pq;
     for (int i = head[x]; i != -1; i = NDS[i].next) {
         int y = NDS[i].to;
         if (vis[y] || (x == d1 && y == d2) || (x == d2 && y == d1)) continue;

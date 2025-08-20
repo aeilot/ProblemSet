@@ -15,7 +15,7 @@ int head[10001];
 int cnt = 0;
 // bool exi[10001][10001];
 void add(int u, int v, bool exist) {
-    if (u == v) return;  // Remove Self-Loop
+    if (u == v) return;// Remove Self-Loop
     //    if(exi[u][v] && exist) return; // Remove Duplicates
     //    exi[u][v] = true;
     NDS[cnt].to = v;
@@ -56,7 +56,7 @@ void pre2(int x) {
 int n, m;
 int dis[10001];
 void dfs(int x) {
-    priority_queue<pair<int, int> > pq;
+    priority_queue<pair<int, int>> pq;
     for (int i = 0; i <= n; i++) {
         dis[i] = INF;
     }

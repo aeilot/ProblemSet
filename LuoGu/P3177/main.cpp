@@ -47,7 +47,7 @@ void dfs(long long x) {
                 if (f[x][l - s] == -1) continue;
                 f[x][l] = max(f[x][l],
                               f[x][l - s] + f[y][s] + s * (k - s) * W[i] +
-                                  (size[y] - s) * (n - k - size[y] + s) * W[i]);
+                                      (size[y] - s) * (n - k - size[y] + s) * W[i]);
             }
         }
     }

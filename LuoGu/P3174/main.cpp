@@ -43,7 +43,7 @@ void dfs(int x) {
      */
     f[x] = (deg[x] == 1) ? 1 : max0 + deg[x] + ((x == 1) ? 0 : -1);
     if (cnt == 0)
-        ans = deg[x] + 1;  // 没有 max0,max1
+        ans = deg[x] + 1;// 没有 max0,max1
     else if (cnt == 1) {
         ans = max(ans, max0 + deg[x]);
     } else {

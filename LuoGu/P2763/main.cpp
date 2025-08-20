@@ -77,7 +77,7 @@ void print(int x, int mminu) {
         int y = NDS[i].to;
         if (y != ter) {
             if (NDS[i].c != 0) {
-                cout << y - mminu << " ";  // 注意编号和输出
+                cout << y - mminu << " ";// 注意编号和输出
             }
         }
     }

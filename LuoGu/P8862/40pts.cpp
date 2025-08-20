@@ -79,7 +79,7 @@ struct Step {
 } OPs[100010];
 
 void clear() {
-    for (auto& i : NDS) {
+    for (auto &i : NDS) {
         i.tg = 0;
         i.v = 0;
     }

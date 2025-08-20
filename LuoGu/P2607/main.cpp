@@ -10,7 +10,7 @@ struct Node {
 } NDS[2000010];
 
 long long head[1000010];
-long long fa[1000010];  // 一一对应 便于找环
+long long fa[1000010];// 一一对应 便于找环
 bool vis[1000010];
 long long W[1000010];
 long long cnt = 0;

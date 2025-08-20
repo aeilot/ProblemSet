@@ -22,7 +22,7 @@ void add(int a, int b, int d) {
 }
 
 int fa[201];
-long long f[201][201][52][2];  // 祖先唯一性
+long long f[201][201][52][2];// 祖先唯一性
 long long dep[201];
 long long n, k;
 
@@ -43,7 +43,7 @@ void dp(int x) {
                     f[x][ff][l][0] = min(f[x][ff][l][0],
                                          f[x][ff][l - s][0] + f[y][ff][s][0]);
                     f[x][ff][l][1] =
-                        min(f[x][ff][l][1], f[x][ff][l - s][1] + f[y][x][s][0]);
+                            min(f[x][ff][l][1], f[x][ff][l - s][1] + f[y][x][s][0]);
                 }
             }
         }

@@ -70,7 +70,7 @@ int main() {
     long long r = 0, l = 0;
     for (int i = 1; i <= n; i++) {
         cin >> F[i];
-        r = max(r, (long long)F[i]);
+        r = max(r, (long long) F[i]);
     }
     l = min(F[1], F[n]);
     for (int i = 1; i <= m; i++) {
@@ -79,14 +79,14 @@ int main() {
         add(a, b, c);
         add(b, a, c);
     }
-    if (check(1e9 + 1)) {  // 可行特判
+    if (check(1e9 + 1)) {// 可行特判
         cout << "AFK" << endl;
         return 0;
     }
     long long mid = (l + r) / 2;
     while (l <= r) {
         mid = (l + r) / 2;
-        if (mid < F[1] || check(mid)) {  // 起点特判
+        if (mid < F[1] || check(mid)) {// 起点特判
             l = mid + 1;
         } else {
             r = mid - 1;

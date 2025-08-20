@@ -56,7 +56,7 @@ bool spfa(int s) {
 struct pos {
     int x;
     long long d;
-    const bool operator<(const pos& p) const { return p.d < this->d; }
+    const bool operator<(const pos &p) const { return p.d < this->d; }
 };
 
 void dijkstra(int s) {

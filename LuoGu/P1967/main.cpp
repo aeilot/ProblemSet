@@ -9,7 +9,7 @@ struct Node {
     int from, to, next;
     long long w;
 
-    const bool operator<(const Node& a) const { return a.w > this->w; }
+    const bool operator<(const Node &a) const { return a.w > this->w; }
 } NDS[100010], TRE[100010];
 
 int cnt = 0, cntr = 0;

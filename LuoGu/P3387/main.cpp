@@ -66,7 +66,7 @@ void tarjan(int x) {
 
 struct topp {
     int x, in;
-    const bool operator<(const topp& a) const { return a.in < this->in; }
+    const bool operator<(const topp &a) const { return a.in < this->in; }
 };
 
 int n, m;

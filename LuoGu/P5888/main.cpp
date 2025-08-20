@@ -59,7 +59,7 @@ int main() {
             sum %= MOD;
         }
         DP[cur][idf] =
-            (1LL * sum2 * Fc % MOD - 1LL * DP[prev][idf] % MOD) % MOD;
+                (1LL * sum2 * Fc % MOD - 1LL * DP[prev][idf] % MOD) % MOD;
         sum = (sum % MOD + DP[cur][idf] % MOD) % MOD;
     }
     cout << DP[m & 1][Dict[1]] % MOD << endl;

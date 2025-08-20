@@ -11,7 +11,7 @@ struct SG {
 
 bool v[200010];
 
-bool cmp(const SG& a, const SG& b) {
+bool cmp(const SG &a, const SG &b) {
     if (a.l == b.l) {
         return a.r < b.r;
     }

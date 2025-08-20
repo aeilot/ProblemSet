@@ -30,7 +30,7 @@ int main() {
                 if ((j & (1 << k)) != 0) continue;
                 if (DP[i][j] + W[k] <= mw) {
                     DP[i][j | (1 << k)] =
-                        min(DP[i][j | (1 << k)], DP[i][j] + W[k]);
+                            min(DP[i][j | (1 << k)], DP[i][j] + W[k]);
                 } else {
                     DP[i + 1][j | (1 << k)] = min(DP[i][j | (1 << k)], W[k]);
                 }

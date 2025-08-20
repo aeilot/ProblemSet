@@ -9,7 +9,6 @@ int main() {
     cin >> t;
     while (t--) {
         cin >> l >> r >> x >> a >> b;
-        
     }
     return 0;
 }

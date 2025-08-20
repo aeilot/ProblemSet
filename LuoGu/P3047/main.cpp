@@ -43,7 +43,7 @@ void dfs(int x) {
         if (vis[y]) continue;
         if (dep[y] > dep[x]) {
             for (int j = k; j >= 2; j--) {
-                f[y][j] -= f[y][j - 2];  // 容斥原理
+                f[y][j] -= f[y][j - 2];// 容斥原理
             }
             for (int j = 1; j <= k; j++) {
                 f[y][j] += f[x][j - 1];
