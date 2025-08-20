@@ -11,9 +11,9 @@ jobs:
       - name: "Install clang-format"
         run: |
           sudo apt-get update
-          sudo apt-get install clang-format-10
+          sudo apt-get install clang-format
       - name: "Format Codes"
-        run: clang-format-10 -style=file -i */*/*.cpp
+        run: clang-format -style=file -i */*/*.cpp
       - name: Push changes
         uses: actions-go/push@v1
         with:
