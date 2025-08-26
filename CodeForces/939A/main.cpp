@@ -34,7 +34,7 @@ int main(int argc, char* argv[]){
 	std::fill(vis, vis+MAXN, 0);
 	int n;
 	cin >> n;
-	for(int i = 0; i<n; i++){
+	for(int i = 1; i<=n; i++){
 		int f;
 		cin >> f;
 		// add(i+1, f);
